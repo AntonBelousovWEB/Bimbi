@@ -62,7 +62,7 @@ def change_tor_ip():
     try:
         with socket.socket() as tor_control_socket:
             tor_control_socket.connect(('127.0.0.1', config.CONTROL_PORT))
-            tor_control_socket.send(b'AUTHENTICATE "N:B8hg=mHRe*D;^"\n')
+            tor_control_socket.send(b'AUTHENTICATE "<your_password>"\n')
             response = tor_control_socket.recv(1024)
             if b"250" not in response:
                 return False
