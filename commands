@@ -1,0 +1,2 @@
+python bimbi.py -mode server -k random -ip 10
+python bimbi.py -mode client -k <key> -server_ip <.onion>
